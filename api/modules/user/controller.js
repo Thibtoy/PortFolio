@@ -4,10 +4,7 @@ import database from '../../setup/database';
 const UserController = {
     register : (req, res) => {
     	UserServices.register(req.body)
-    		.then(response => {
-    			console.log(response)
-    			res.status(response.status).send(response.payload.message)
-    		})
+    		.then(response => res.status(response.status).send(response.payload.message))
     		.catch( err => res.status(err.status).send(err.payload.message));
     },
 
