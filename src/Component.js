@@ -12,7 +12,7 @@ export default class Component {
 			
 			if (state){
 				this.state = {...this.state, ...state};
-				this.element.setAttribute('key', Date.now());
+				//this.element.setAttribute('key', Date.now());
 			} 
 			this.render();
 		}
